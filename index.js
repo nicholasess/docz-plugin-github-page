@@ -5,7 +5,7 @@ module.exports = () =>
   createPlugin({
     onPostBuild: () => {
       fs.writeFile(
-        "/.docz/dist/_redirects",
+        "./.docz/dist/_redirects",
         "/*    /index.html   200",
         function(err) {
           if (err) {
