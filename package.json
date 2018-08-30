@@ -1,9 +1,14 @@
 {
   "name": "docz-plugin-netlify",
   "description": "This package makes it possible to use netlify with docz",
-  "version": "1.2.0",
+  "version": "1.1.2",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Nicholas Eduardo",
+    "email": "nicholasess@gmail.com",
+    "url": "https://github.com/nicholasess"
+  },
   "dependencies": {
     "docz-core": "^0.10.3"
   },
@@ -12,5 +17,13 @@
     "docz",
     "plugin",
     "netlify"
-  ]
+  ],
+  "homepage": "https://docz.site",
+  "bugs": {
+    "url": "https://github.com/nicholasess/docz-plugin-netlify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasess/docz-plugin-netlify.git"
+  }
 }
