@@ -1,11 +1,13 @@
-# docz-plugin-netlify
+# docz-plugin-github-page
 
-This package makes it possible to use netlify with docz
+This package makes it possible to use github page with docz
 
 ```js
-import doczPluginNetlify from "docz-plugin-netlify";
+import doczPluginGithubPage from "docz-plugin-github-page";
 
 export default {
-  plugins: [doczPluginNetlify()]
+  plugins: [doczPluginGithubPage()]
 };
 ```
+
+Obs: Use the plugin in final, because it copy the directory .docs/dist to root/docs

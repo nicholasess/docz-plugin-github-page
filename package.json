@@ -1,7 +1,7 @@
 {
-  "name": "docz-plugin-netlify",
-  "description": "This package makes it possible to use netlify with docz",
-  "version": "1.1.4",
+  "name": "docz-plugin-github-page",
+  "description": "This package makes it possible to use github pages with docz",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -10,20 +10,24 @@
     "url": "https://github.com/nicholasess"
   },
   "dependencies": {
-    "docz-core": "^0.10.3"
+    "directory-exists": "^2.0.0",
+    "docz-core": "^0.10.3",
+    "mkdirp": "^0.5.1",
+    "mv": "^2.1.1"
   },
   "keywords": [
-    "docz-plugin-netlify",
+    "docz-plugin-github-page",
     "docz",
     "plugin",
-    "netlify"
+    "github",
+    "pages"
   ],
   "homepage": "https://docz.site",
   "bugs": {
-    "url": "https://github.com/nicholasess/docz-plugin-netlify/issues"
+    "url": "https://github.com/nicholasess/docz-plugin-github-page/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicholasess/docz-plugin-netlify.git"
+    "url": "https://github.com/nicholasess/docz-plugin-github-page.git"
   }
 }

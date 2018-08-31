@@ -1,11 +1,22 @@
-let fs = require("fs");
-let { createPlugin } = require("docz-core");
+const fs = require("fs");
+const directoryExists = require("directory-exists");
+const mv = require("mv");
+const { createPlugin } = require("docz-core");
 
-module.exports = () =>
+const validAndMoveDir = () => {
+  if (directoryExists.sync("docs")) {
+    throw new Error(
+      "Dir docs exists, please rename the dir with other name, because github page use docs to deploy website \n"
+    );
+  } else {
+    mv(".docs/dist", "docs", { mkdirp: true }, function(err) {
+      if (err) throw new Error(err);
+    });
+  }
+};
+
+module.exports = doczPluginGithubPage = () => {
   createPlugin({
-    onPostBuild: () => {
-      fs.writeFileSync("./.docz/dist/_redirects", "/*    /index.html   200", {
-        encoding: "utf8"
-      });
-    }
+    onPostBuild: () => validAndMoveDir()
   });
+};
