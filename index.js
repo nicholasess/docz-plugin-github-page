@@ -1,22 +1,27 @@
 const fs = require("fs");
 const directoryExists = require("directory-exists");
-const mv = require("mv");
 const { createPlugin } = require("docz-core");
+const moveFile = require("./moveFile");
 
-const validAndMoveDir = () => {
-  if (directoryExists.sync("docs")) {
+const removeAndMove = () => {
+  moveFile(".docz/dist", "docs", function(err) {
+    if (err) throw new Error(err);
+  });
+};
+
+const logicPlugin = () => {
+  if (fs.existsSync("docs")) {
     throw new Error(
-      "Dir docs exists, please rename the dir with other name, because github page use docs to deploy website \n"
+      "Dir docs exists, please remove or rename the dir with other name , because github page use docs to deploy website \n"
     );
   } else {
-    mv(".docs/dist", "docs", { mkdirp: true }, function(err) {
-      if (err) throw new Error(err);
-    });
+    removeAndMove();
   }
 };
 
-module.exports = doczPluginGithubPage = () => {
-  createPlugin({
-    onPostBuild: () => validAndMoveDir()
-  });
-};
+module.exports = () =>
+  process.env.TEST
+    ? logicPlugin()
+    : createPlugin({
+        onPostBuild: () => logicPlugin()
+      });

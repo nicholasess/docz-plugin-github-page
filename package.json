@@ -1,7 +1,7 @@
 {
   "name": "docz-plugin-github-page",
   "description": "This package makes it possible to use github pages with docz",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -11,9 +11,7 @@
   },
   "dependencies": {
     "directory-exists": "^2.0.0",
-    "docz-core": "^0.10.3",
-    "mkdirp": "^0.5.1",
-    "mv": "^2.1.1"
+    "docz-core": "^0.10.3"
   },
   "keywords": [
     "docz-plugin-github-page",
