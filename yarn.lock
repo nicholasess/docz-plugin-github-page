@@ -2254,9 +2254,10 @@ dir-glob@^2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
-directory-exists@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/directory-exists/-/directory-exists-2.0.0.tgz#90ba497722b5777cc36e575f157542a730bf4d57"
+directory-exists@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/directory-exists/-/directory-exists-2.0.1.tgz#7c763f1c75975c088f8f74cd669e150b7cdaf030"
+  integrity sha512-+CEod3IzwjvhQOMXFSU6nrqdTwrhzOiacNzzXlwBVFm7C4y2rbuEWs5WaRsI/3IZeSWORA5F1q8FBh3gm4HSsw==
 
 doctrine@^2.0.0:
   version "2.1.0"
