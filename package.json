@@ -10,7 +10,7 @@
     "url": "https://github.com/nicholasess"
   },
   "dependencies": {
-    "directory-exists": "^2.0.0",
+    "directory-exists": "^2.0.1",
     "docz-core": "^0.10.3"
   },
   "keywords": [
