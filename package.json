@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "directory-exists": "^2.0.0",
-    "docz-core": "^0.10.3"
+    "docz-core": "^2.0.0",
+    "@snyk/protect": "latest"
   },
   "keywords": [
     "docz-plugin-github-page",
@@ -27,5 +28,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nicholasess/docz-plugin-github-page.git"
-  }
+  },
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
