@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "directory-exists": "^2.0.0",
-    "docz-core": "^0.10.3"
+    "docz-core": "^1.1.0"
   },
   "keywords": [
     "docz-plugin-github-page",
